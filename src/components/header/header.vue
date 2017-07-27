@@ -18,9 +18,9 @@
 
 <style lang="less" type="text/less" rel="stylesheet/less">
   header{
-    position: fixed;
-    top:0;
-    left:0;
+    /*position: fixed;*/
+    /*top:0;*/
+    /*left:0;*/
     width: 100%;
     height: 1rem;
     background-color: #91bb35;
