@@ -28,6 +28,7 @@
     .imgCon{
       width: 2.3rem;
       height: 2.3rem;
+      background-size: cover;
     }
   }
 </style>
