@@ -40,7 +40,11 @@
             },
             recommendData:{
               recommend:[
-                {id:1,image:'',title:'test',prize:'1'}
+                {id:1,image:'http://gw.alicdn.com/tps/TB1MzfaLpXXXXaXXXXXXXXXXXXX-345-306.jpg_q50.jpg',title:'test',prize:'10'},
+                {id:2,image:'http://gw.alicdn.com/tps/TB1MzfaLpXXXXaXXXXXXXXXXXXX-345-306.jpg_q50.jpg',title:'test',prize:'200'},
+                {id:3,image:'http://gw.alicdn.com/tps/TB1MzfaLpXXXXaXXXXXXXXXXXXX-345-306.jpg_q50.jpg',title:'test',prize:'300'},
+                {id:4,image:'http://gw.alicdn.com/tps/TB1MzfaLpXXXXaXXXXXXXXXXXXX-345-306.jpg_q50.jpg',title:'test',prize:'400'},
+                {id:5,image:'http://gw.alicdn.com/tps/TB1MzfaLpXXXXaXXXXXXXXXXXXX-345-306.jpg_q50.jpg',title:'test',prize:'400'},
               ],
               good:[]
             },
@@ -58,6 +62,7 @@
       img{
         width: 100%;
         height: 100%;
+        background-size: cover;
       }
     }
   }
