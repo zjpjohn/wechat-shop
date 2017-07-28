@@ -54,6 +54,10 @@
 </script>
 
 <style lang="less" type="text/less" rel="stylesheet/less">
+  .index{
+    height: 100%;
+    overflow: scroll;
+  }
   .swiper-container{
     width: 100%;
     height: 3.3rem;
