@@ -8,10 +8,15 @@
     </swiper>
     <div class="list-product">
       <div class="title">精选商品</div>
-      <div class="line"></div>
       <p v-if="recommendData.recommend.length==0" class="tips">暂无精选商品</p>
       <ShopItems :items="recommendData.recommend" ></ShopItems>
     </div>
+    <div class="list-good">
+      <div class="title">全部商品</div>
+      <p v-if="recommendData.recommend.length==0" class="tips">暂无全部商品</p>
+      <ShopItems :items="recommendData.good" ></ShopItems>
+    </div>
+    <router-link to="/all" class="all-good-btn">查看全部商品</router-link>
   </div>
 
 </template>
@@ -43,7 +48,12 @@
                 {id:3,image:'http://gw.alicdn.com/tps/TB1MzfaLpXXXXaXXXXXXXXXXXXX-345-306.jpg_q50.jpg',title:'test',prize:'300'},
                 {id:4,image:'http://gw.alicdn.com/tps/TB1MzfaLpXXXXaXXXXXXXXXXXXX-345-306.jpg_q50.jpg',title:'test',prize:'400'},
               ],
-              good:[]
+              good:[
+                {id:1,image:'http://gw.alicdn.com/tps/TB1MzfaLpXXXXaXXXXXXXXXXXXX-345-306.jpg_q50.jpg',title:'test',prize:'10'},
+                {id:2,image:'http://gw.alicdn.com/tps/TB1MzfaLpXXXXaXXXXXXXXXXXXX-345-306.jpg_q50.jpg',title:'test',prize:'200'},
+                {id:3,image:'http://gw.alicdn.com/tps/TB1MzfaLpXXXXaXXXXXXXXXXXXX-345-306.jpg_q50.jpg',title:'test',prize:'300'},
+                {id:4,image:'http://gw.alicdn.com/tps/TB1MzfaLpXXXXaXXXXXXXXXXXXX-345-306.jpg_q50.jpg',title:'test',prize:'400'},
+              ]
             },
           }
       }
@@ -52,7 +62,7 @@
 
 <style lang="less" type="text/less" rel="stylesheet/less">
   .index{
-    height: 100%;
+    height: 91%;
     overflow: scroll;
   }
 
@@ -68,6 +78,7 @@
     }
   }
   .list-product{
+    border-bottom: 0.1rem solid #91bb35;
     .title{
       font-size: 0.32rem;
       height: 0.6rem;
@@ -75,6 +86,28 @@
       text-align: center;
       border-bottom: 1px solid #d9d9d9;
     }
+  }
+  .list-good{
+    border-bottom: 0.1rem solid #91bb35;
+    .title{
+      font-size: 0.32rem;
+      height: 0.6rem;
+      line-height: 0.6rem;
+      text-align: center;
+      border-bottom: 1px solid #d9d9d9;
+    }
+  }
+  .all-good-btn{
+    background-color: #91bb35;
+    display: block;
+    color: #ffffff;
+    font-size: 0.3rem;
+    border-radius: 4px;
+    margin:0.3rem auto;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    width: 80%;
   }
 
 </style>
