@@ -1,18 +1,21 @@
 <template>
-  <li class="item">
-    <router-link :to="{path:'/detail',query:{id:itemData.id} }">
-      <div class="imgCon" :style="{backgroundImage:'url('+itemData.image+')'}"></div>
-      <p class="name">{{itemData.title}}</p>
-      <p class="price">¥ {{itemData.prize}}</p>
-    </router-link>
-  </li>
+  <ul>
+    <li class="item" v-for="item in items">
+      <router-link :to="{path:'/detail',query:{id:item.id} }">
+        <div class="imgCon" :style="{backgroundImage:'url('+item.image+')'}"></div>
+        <p class="name">{{item.title}}</p>
+        <p class="price">¥ {{item.prize}}</p>
+      </router-link>
+    </li>
+  </ul>
+
 </template>
 
 <script>
   export default {
       name:'shop-item',
       props:{
-        itemData:{}
+        items:{}
       }
   }
 </script>
@@ -30,5 +33,9 @@
       height: 2.3rem;
       background-size: cover;
     }
+    &:nth-child(2n+1){
+      border-right:1px solid #d9d9d9;
+    }
   }
+
 </style>

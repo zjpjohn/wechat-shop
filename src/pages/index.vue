@@ -10,9 +10,7 @@
       <div class="title">精选商品</div>
       <div class="line"></div>
       <p v-if="recommendData.recommend.length==0" class="tips">暂无精选商品</p>
-      <template v-for="item in recommendData.recommend">
-        <ShopItem :itemData="item" :key="item"></ShopItem>
-      </template>
+      <ShopItems :items="recommendData.recommend" ></ShopItems>
     </div>
   </div>
 
@@ -25,11 +23,11 @@
   import swiperImage2 from '../assets/img/swiper/swiper2.jpg'
   import swiperImage3 from '../assets/img/swiper/swiper3.jpg'
   import SwiperSlide from "vue-awesome-swiper/slide";
-  import ShopItem from '../components/item/item'
+  import ShopItems from '../components/item/item'
   export default {
       name:"index",
       components:{
-        SwiperSlide, Swiper, ShopHeader,ShopItem
+        SwiperSlide, Swiper, ShopHeader,ShopItems
       },
       data(){
           return {
@@ -44,7 +42,6 @@
                 {id:2,image:'http://gw.alicdn.com/tps/TB1MzfaLpXXXXaXXXXXXXXXXXXX-345-306.jpg_q50.jpg',title:'test',prize:'200'},
                 {id:3,image:'http://gw.alicdn.com/tps/TB1MzfaLpXXXXaXXXXXXXXXXXXX-345-306.jpg_q50.jpg',title:'test',prize:'300'},
                 {id:4,image:'http://gw.alicdn.com/tps/TB1MzfaLpXXXXaXXXXXXXXXXXXX-345-306.jpg_q50.jpg',title:'test',prize:'400'},
-                {id:5,image:'http://gw.alicdn.com/tps/TB1MzfaLpXXXXaXXXXXXXXXXXXX-345-306.jpg_q50.jpg',title:'test',prize:'400'},
               ],
               good:[]
             },
@@ -58,6 +55,7 @@
     height: 100%;
     overflow: scroll;
   }
+
   .swiper-container{
     width: 100%;
     height: 3.3rem;
@@ -66,8 +64,16 @@
       img{
         width: 100%;
         height: 100%;
-
       }
+    }
+  }
+  .list-product{
+    .title{
+      font-size: 0.32rem;
+      height: 0.6rem;
+      line-height: 0.6rem;
+      text-align: center;
+      border-bottom: 1px solid #d9d9d9;
     }
   }
 
