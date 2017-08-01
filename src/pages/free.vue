@@ -105,5 +105,35 @@
   }
 </script>
 
-<style>
+<style lang="less">
+  .free{
+    background-color: #f4f4f4;
+  }
+  .main{
+    height: 1rem;
+    text-align: center;
+    background-color:#ffffff ;
+    h1{
+      font-size: 0.3rem;
+      height: 0.5rem;
+      line-height: 0.5rem;
+    }
+    p{
+      color:#b4282d;
+    }
+    margin-bottom:0.1rem ;
+  }
+  .tips{
+    background-color: #ffffff;
+    height: 0.7rem;
+    font-size: 0.2rem;
+    padding:0.3rem;
+    line-height: 0.3rem;
+    margin-bottom: 0.1rem;
+    text-align: center;
+  }
+  .form{
+    margin: 0 auto;
+    width: 80%;
+  }
 </style>
